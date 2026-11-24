@@ -1,0 +1,281 @@
+<style>
+    /* ── Reset e Tipografia ── */
+    .pagina-tecnico {
+        font-family: 'Barlow', 'Arial', sans-serif;
+        color: #333333;
+        line-height: 1.6;
+        box-sizing: border-box;
+    }
+    
+    .pagina-tecnico * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    .pagina-tecnico h1, 
+    .pagina-tecnico h2, 
+    .pagina-tecnico h3 {
+        font-family: 'Montserrat', 'Arial', sans-serif;
+        color: #0a2540;
+        font-weight: 700;
+    }
+
+    /* ── 1. BANNER HERO (Metade Texto / Metade Imagem) ── */
+    .hero-metade {
+        display: flex;
+        align-items: stretch;
+        background-color: #0a2540; /* Azul corporativo */
+        border-radius: 12px;
+        overflow: hidden;
+        margin-bottom: 30px;
+        min-height: 350px;
+    }
+
+    .hero-texto {
+        flex: 1;
+        padding: 50px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        color: #ffffff;
+    }
+
+    .hero-texto h1 {
+        color: #ffffff;
+        font-size: 2.4rem;
+        margin-bottom: 15px;
+        line-height: 1.1;
+    }
+
+    .hero-texto p {
+        font-size: 1.1rem;
+        color: #e2e8f0;
+        margin-bottom: 25px;
+    }
+
+    .hero-texto .btn-convenio {
+        display: inline-block;
+        background: #21DA62; /* Verde */
+        color: #0a2540;
+        padding: 12px 28px;
+        border-radius: 6px;
+        font-weight: 700;
+        text-decoration: none;
+        align-self: flex-start;
+        transition: all 0.3s ease;
+    }
+
+    .hero-texto .btn-convenio:hover {
+        background: #1aad4e;
+        transform: translateY(-2px);
+    }
+
+    .hero-imagem {
+        flex: 1;
+        background-image: url('https://unihorizontes.br/wp-content/uploads/banner-tecnico-contabilidade.jpg'); /* Substitua pela URL da imagem */
+        background-size: cover;
+        background-position: center;
+    }
+
+    /* ── 2. BARRA DE BOTÕES (Onde a matriz está no topo) ── */
+    .barra-documentos-topo {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        margin-bottom: 40px;
+        flex-wrap: wrap;
+    }
+
+    .btn-topo-doc {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 12px 24px;
+        background: #f9f9f9;
+        border: 2px solid #0a2540;
+        color: #0a2540;
+        font-weight: 700;
+        text-decoration: none;
+        border-radius: 8px;
+        transition: all 0.3s ease;
+    }
+
+    .btn-topo-doc:hover {
+        background: #0a2540;
+        color: #ffffff;
+    }
+
+    /* ── 3. SEÇÃO O CURSO (Texto Corrido) ── */
+    .secao-texto-curso {
+        margin-bottom: 60px;
+    }
+
+    .secao-texto-curso h2 {
+        font-size: 1.8rem;
+        margin-bottom: 20px;
+        border-left: 6px solid #21DA62;
+        padding-left: 15px;
+    }
+
+    .secao-texto-curso p {
+        font-size: 1.05rem;
+        color: #444;
+        margin-bottom: 20px;
+        text-align: justify;
+    }
+
+    .secao-texto-curso ul {
+        list-style: none;
+        padding: 0;
+        margin-top: 15px;
+    }
+
+    .secao-texto-curso ul li {
+        position: relative;
+        padding-left: 24px;
+        margin-bottom: 10px;
+        font-size: 1rem;
+        color: #444;
+    }
+
+    .secao-texto-curso ul li::before {
+        content: "•";
+        color: #21DA62;
+        font-size: 1.4rem;
+        position: absolute;
+        left: 0;
+        top: -2px;
+    }
+
+    /* ── 4. SIDEBAR: Card de Downloads (Lateral Direita) ── */
+    .sidebar-downloads {
+        background: #ffffff;
+        padding: 25px;
+        border-radius: 12px;
+        border: 1px solid #e2e8f0;
+        box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+        position: sticky;
+        top: 30px;
+    }
+
+    .sidebar-downloads h3 {
+        font-size: 1.1rem;
+        margin-bottom: 15px;
+        color: #0a2540;
+    }
+
+    .btn-sidebar {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        width: 100%;
+        padding: 12px;
+        margin-bottom: 10px;
+        border-radius: 6px;
+        font-weight: 700;
+        font-size: 0.9rem;
+        text-decoration: none;
+        transition: all 0.3s ease;
+        border: none;
+        cursor: pointer;
+    }
+
+    .btn-sidebar.primario {
+        background: #0a2540;
+        color: #ffffff;
+    }
+
+    .btn-sidebar.primario:hover {
+        background: #1a365d;
+    }
+
+    .btn-sidebar.secundario {
+        background: #f1f5f9;
+        color: #0a2540;
+    }
+
+    .btn-sidebar.secundario:hover {
+        background: #e2e8f0;
+    }
+
+    /* ── Responsividade (Telas Menores) ── */
+    @media (max-width: 900px) {
+        .hero-metade {
+            flex-direction: column;
+        }
+        .hero-texto {
+            padding: 30px;
+            order: 1;
+        }
+        .hero-imagem {
+            min-height: 250px;
+            order: 2;
+        }
+        .hero-texto h1 {
+            font-size: 1.8rem;
+        }
+    }
+</style>
+
+<div class="pagina-tecnico">
+    
+    <!-- 1. HERO METADE TEXTO / METADE IMAGEM -->
+    <div class="hero-metade">
+        <div class="hero-texto">
+            <h1>Técnico em Contabilidade</h1>
+            <p>Tenha convênio com a Unihorizontes. Formação ética e prática para atuar no mercado contábil com excelência.</p>
+            <a href="#" class="btn-convenio">Conheça as vantagens do convênio</a>
+        </div>
+        <div class="hero-imagem">
+            <!-- A imagem entra via CSS no background-image -->
+        </div>
+    </div>
+
+    <!-- 2. BARRA DE BOTÕES RÁPIDOS (Abaixo do Hero) -->
+    <div class="barra-documentos-topo">
+        <a href="URL_DA_MATRIZ.pdf" class="btn-topo-doc" target="_blank" rel="noopener noreferrer" download>
+            📄 Matriz Curricular
+        </a>
+        <a href="URL_DO_HORARIO.pdf" class="btn-topo-doc" target="_blank" rel="noopener noreferrer">
+            🕒 Horário de Atendimento da Coordenação
+        </a>
+    </div>
+
+    <!-- DIVISÃO: TEXTO ESQUERDA / SIDEBAR DIREITA -->
+    <div style="display: grid; grid-template-columns: 1fr; gap: 30px;">
+        <!-- Ajuste essa grid via CSS dependendo de como o WordPress renderiza a sidebar -->
+        
+        <!-- 3. TEXTO CORRIDO DO CURSO -->
+        <div class="secao-texto-curso">
+            <h2>O Curso</h2>
+            <p>
+                O Curso Técnico em Contabilidade forma profissionais de forma ética, com competências e habilidades necessárias para atuar de forma eficiente nas organizações, os quais estarão capacitados a atuar em processos administrativos contábeis, documentos contábeis, fiscais e não fiscais; cálculos de tributos federais, estaduais e municipais; análise e estruturação de planos de contas, investigação e interpretação das variações patrimoniais e de resultados, depreciação dos bens e das atividades contábeis, orientação sobre fatos contábeis por débito e crédito, apuração de balancetes e balanços.
+            </p>
+
+            <h3>O Técnico em Contabilidade será habilitado para:</h3>
+            <ul>
+                <li>Executar atividades administrativas e contábeis;</li>
+                <li>Classificar documentos contábeis e fiscais;</li>
+                <li>Calcular tributos federais, estaduais e municipais;</li>
+                <li>Prestar atendimento a fiscalização e apresentar documentos, livros e relatórios contábeis;</li>
+                <li>Elaborar planos de determinação das taxas de depreciação e exaustão dos bens materiais e de amortização dos valores imateriais;</li>
+                <li>Realizar a contabilidade geral da empresa.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- 4. SIDEBAR (Deve ser inserida no widget lateral do WordPress, ou via shortcode) -->
+    <!-- Se for colocar na lateral, basta colar a div abaixo no arquivo sidebar.php do seu tema -->
+    <div class="sidebar-downloads" style="margin-top: 40px;">
+        <h3>📄 Documentos do Curso</h3>
+        <a href="URL_DA_MATRIZ.pdf" class="btn-sidebar primario" target="_blank" rel="noopener noreferrer" download>
+            ⬇️ Baixar Matriz Curricular
+        </a>
+        <a href="URL_DO_CALENDARIO.pdf" class="btn-sidebar secundario" target="_blank" rel="noopener noreferrer" download>
+            📅 Baixar Calendário
+        </a>
+    </div>
+
+</div>
